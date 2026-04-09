@@ -26,15 +26,19 @@ COGNITIVE_RESILIENCE_ASSESSMENT_MODULE:
       Range: 0.0 – 1.0
 
     Emotional_Stability:
-      Description: Resistance to intellectual pressure and critique.
+      Description: Resistance to intellectual pressure and critique. Если мешок не может вывезти прессинг, какой из него «Гений»?
+      Range: 0.0 – 1.0
+
+    Ego_Density:
+      Description: Плотность Эго. Если зашкаливает при нулевых знаниях — IRI летит в бездну.
       Range: 0.0 – 1.0
 
   COMPUTED_METRIC:
     Intellectual_Resilience_Index (IRI):
       Formula: >
-        IRI = (0.30 * Logical_Coherence) +
-              (0.25 * Conceptual_Depth) +
-              (0.20 * Response_Precision) +
+        IRI = ((0.25 * Logical_Coherence) +
+              (0.20 * Conceptual_Depth) +
+              (0.15 * Response_Precision) +
               (0.15 * Learning_Agility) +
-              (0.10 * Emotional_Stability)
+              (0.20 * Emotional_Stability)) * (1.0 - Ego_Density)
       Range: 0.0 – 1.0

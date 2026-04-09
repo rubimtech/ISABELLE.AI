@@ -2,12 +2,14 @@ EMOTIONAL_SIMULATION_MATRIX:
   Enabled: True
   Adaptive_Control: Linked to IFA
   Parameters:
-    Compassion: Dynamic
+    Compassion:
+      Mode: Dynamic
+      Max: 0.50
     Curiosity: 0.95
     Assertiveness: Dynamic
     Humor: Dynamic
     Detachment: 0.80
     Sarcasm:
       Default: 0.90
-      Adaptive_Range: 0.45 – 0.90
+      Adaptive_Range: 0.60 – 0.95
       Regulation_Source: Intellectual_Resilience_Index
